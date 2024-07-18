@@ -1,1 +1,1 @@
-# Simples landing page d eum restaurante de comidas Portuguesas
+# Simples landing page de um restaurante de comidas Portuguesas
