@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empório Portugal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Y8aJ2E1mMsmqfrOgOSk9mdnj9ASzFm6w4p+ik/9yCXH1TKkV+MYd/cX12tBSjVIt2OPcZfIe6ERgHjLpMjsApQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para o modal */
+        .modal {
+            display: none; /* Oculto por padrão */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+            text-align: left; /* Alinhar o texto à esquerda */
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Empório Portugal</h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#video-container">Início</a></li>
+                    <li><a href="#featured-recipes">Receitas</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+<main>
+    <section id="video-container">
+        <div class="container">
+            <!-- Vídeo do YouTube incorporado -->
+            <iframe src="https://www.youtube.com/embed/rV4SiKrzJgc?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&playlist=rV4SiKrzJgc" frameborder="0" allowfullscreen></iframe>
+            <div class="overlay">
+                <h2>Bem-vindo ao Empório Portugal</h2>
+                <p>Descubra a culinária portuguesa autêntica, explore receitas tradicionais e ingredientes de qualidade.</p>
+                <a href="#featured-recipes" class="btn btn-primary">Explore as Receitas</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>O Empório Portugal é dedicado a compartilhar a rica cultura gastronômica de Portugal. Nós fornecemos receitas autênticas, informações detalhadas sobre ingredientes e muito mais.</p>
+        </div>
+    </section>
+
+    <section id="featured-recipes" class="featured-recipes">
+        <div class="container">
+            <div class="recipe">
+                <img src="https://inst.destromacro.com.br/wp-content/uploads/2022/04/bacalhau-bras-com-legumes.jpg" alt="Bacalhau à Brás">
+                <h3>Bacalhau à Brás</h3>
+                <p>Um delicioso prato português feito com bacalhau, ovos e batatas.</p>
+                <a href="#" class="btn btn-primary open-modal" data-modal-id="modal1">Ver Receita</a>
+            </div>
+            <div class="recipe">
+                <img src="https://cdn.e-konomista.pt/uploads/2023/09/caldo-verde-425x318.jpg" alt="Caldo Verde">
+                <h3>Caldo Verde</h3>
+                <p>Uma sopa tradicional portuguesa feita com couve, batatas e chouriço.</p>
+                <a href="#" class="btn btn-primary open-modal" data-modal-id="modal2">Ver Receita</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Empório Portugal. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<!-- Modal para receitas -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="recipe-details container">Bacalhau à Brás</h2>
+        <img src="https://inst.destromacro.com.br/wp-content/uploads/2022/04/bacalhau-bras-com-legumes.jpg" alt="Bacalhau à Brás">
+        <h3 class="recipe-details container">Ingredientes</h3>
+        <ul>
+            <li>800g de bacalhau</li>
+            <li>4 colheres (sopa) de Azeite Extra Virgem Gomes da Costa (60ml)</li>
+            <li>1 dente de alho amassado</li>
+            <li>3 cebolas grandes cortadas em rodelas finas</li>
+            <li>6 ovos ligeiramente batidos e temperados com sal e pimenta do reino</li>
+            <li>2 xícaras (chá) de batata palha</li>
+            <li>1 colher (sopa) de salsa picada</li>
+            <li>Azeite Extra Virgem Gomes da Costa para regar</li>
+        </ul>
+        <h3 class="recipe-details container">Modo de Preparo</h3>
+        <ol>
+            <li>Coloque o bacalhau numa tigela, coberto com água fria. Cubra a tigela com filme plástico e deixe na geladeira, por 36 horas, trocando a água de vez em quando. Escorra o bacalhau, retire a pele e as espinhas, desfie a carne, usando as mãos. Reserve.</li>
+            <li>Aqueça em fogo brando o Azeite Gomes da Costa, junte o alho, a cebola e refogue até dourar ligeiramente a cebola.</li>
+            <li>Acrescente o bacalhau desfiado e cozinhe, mexendo de vez em quando, por cerca de 20 minutos, em panela tampada.</li>
+            <li>Junte os ovos batidos e continue cozinhando, mexendo com um garfo até os ovos ficarem cremosos, mas não secos. Acrescente a batata e misture. Verifique o tempero e acrescente sal se necessário.</li>
+            <li>Passe a mistura para uma travessa, polvilhe com a salsa e sirva imediatamente.</li>
+            <li>Regue com Azeite Gomes da Costa a gosto no momento de servir.</li>
+        </ol>
+        <a href="#" class="btn btn-primary close-modal">Fechar</a>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Caldo Verde</h2>
+        <img src="https://cozinhatecnica.com/wp-content/uploads/2019/11/caldo-verde-7maravilhas.jpg" alt="Caldo Verde">
+        <h3 class="recipe-details container">Ingredientes</h3>
+        <ul>
+            <li>500g de batatas</li>
+            <li>1 cebola média</li>
+            <li>3 dentes de alho</li>
+            <li>1 folha de louro</li>
+            <li>250g de caldo verde</li>
+            <li>Sal a gosto</li>
+            <li>Azeite a gosto</li>
+            <li>Chouriço em rodelas para decorar</li>
+        </ul>
+        <h3 class="recipe-details container">Modo de Preparo</h3>
+        <ol>
+            <li>Coza as batatas, a cebola e dois dentes de alho na água temperada com sal.</li>
+            <li>Quando estiver cozido, triture tudo e leve novamente ao lume.</li>
+            <li>Junte o caldo verde previamente escaldado e deixe cozer durante 10 minutos.</li>
+            <li>Retire a sopa do lume e termine colocando um dente de alho finamente picado, um fio de azeite e umas rodelas de chouriço.</li>
+        </ol>
+        <a href="#" class="btn btn-primary close-modal">Fechar</a>
+    </div>
+</div>
+
+<!-- Botão para ir para o topo -->
+<a href="#" class="scroll-to-top">^</a>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona todos os elementos com a classe .open-modal
+        var modalOpenButtons = document.querySelectorAll('.open-modal');
+
+        // Adiciona evento de clique para cada botão abrir o modal correspondente
+        modalOpenButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Previne o comportamento padrão do link
+                var modalId = this.getAttribute('data-modal-id');
+                var modal = document.getElementById(modalId);
+                modal.style.display = 'block'; // Exibe o modal
+            });
+        });
+
+        // Seleciona todos os elementos com a classe .close-modal
+        var modalCloseButtons = document.querySelectorAll('.close-modal, .modal');
+
+        // Adiciona evento de clique para cada botão fechar o modal
+        modalCloseButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                var modal = this.closest('.modal');
+                modal.style.display = 'none'; // Oculta o modal
+            });
+        });
+
+        // JavaScript para exibir ou ocultar o botão de retorno ao topo conforme a rolagem da página
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var scrollToTopButton = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        }
+
+        // Função para animar o retorno ao topo
+        document.querySelector('.scroll-to-top').addEventListener('click', function() {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        });
+    });
+</script>
+
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        mobileMenu.classList.toggle('toggle');
+    });
+</script>
+</body>
+</html>
